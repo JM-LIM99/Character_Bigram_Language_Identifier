@@ -18,6 +18,7 @@ Accuracy : 88.5%
 
 Character-Bigram-Language-ID/
 ├── README.md
+├── result.png
 ├── evaluation_models.py  # Runs evaluation on test set
 ├── generate_reference.py # Builds per-language bigram reference models    
 └── utils/
