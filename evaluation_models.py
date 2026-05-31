@@ -1,9 +1,10 @@
 import os
 import glob
 import json
+from pathlib import Path
 
-from text_analyzer import TextAnalyzer
-from language_evaluator import TextLanguageEvaluator
+from utils.text_analyzer import TextAnalyzer
+from utils.language_evaluator import TextLanguageEvaluator
 
 def main():
     evaluator = TextLanguageEvaluator()
@@ -26,11 +27,11 @@ def main():
 
     for file_path in test_file_list:
 
-        dossiers = file_path.split("/")
-        if len(dossiers) < 3:
+        parts = Path(file_path).parts
+        if len(parts) < 3:
             continue
 
-        actual_language = dossiers[-3]
+        actual_language = parts[-3]
 
         raw_text = evaluator.read_file(file_path)
         clean_text = raw_text.replace(" ", "").replace("\n", "").replace("\t", "")

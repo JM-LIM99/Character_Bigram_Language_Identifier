@@ -1,7 +1,7 @@
 import json
 import os
 import glob
-import matplotlib.pyplot as plt
+
 
 
 class TextAnalyzer:
