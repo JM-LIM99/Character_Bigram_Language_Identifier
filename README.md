@@ -15,15 +15,16 @@ Correct : 1,090
 Accuracy : 88.5%
 
 ## Project Structure
-
+```
 Character-Bigram-Language-ID/
 ├── README.md
 ├── result.png
 ├── evaluation_models.py  # Runs evaluation on test set
 ├── generate_reference.py # Builds per-language bigram reference models    
 └── utils/
+    ├── __init__.py
     ├── text_analyzer.py     # Bigram extraction and analysis
     └── language_evaluator.py # Scoring and metrics
-
+```
 # Stack
 Python, pathlib, json
